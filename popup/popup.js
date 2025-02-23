@@ -1,9 +1,7 @@
 document.getElementById("saveKeys").addEventListener("click", function() {
-  const chatgptKey = document.getElementById("chatgptKey").value;
   const geminiKey = document.getElementById("geminiKey").value;
-  const selectedAI = document.getElementById("aiService").value;
   
-  chrome.storage.sync.set({ chatgptKey, geminiKey, selectedAI }, () => {
+  chrome.storage.sync.set({ geminiKey }, () => {
     alert("Settings saved successfully.");
   });
 });
